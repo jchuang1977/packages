@@ -9,10 +9,14 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=snort
 PKG_VERSION:=2.9.7.2
-PKG_RELEASE:=2
+PKG_RELEASE:=3
+
+PKG_LICENSE:=GPL-2.0
+PKG_MAINTAINER:=Luka Perkov <luka@openwrt.org>
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://www.snort.org/downloads/snort/
+PKG_SOURCE_URL:=https://www.snort.org/downloads/snort/ \
+	@SF/$(PKG_NAME)
 PKG_MD5SUM:=b01e9964827394c39194a0147bc15705
 
 PKG_BUILD_DEPENDS:=librpc
